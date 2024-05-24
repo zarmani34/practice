@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+--White: hsl(0, 0%, 100%);
+--Black: hsl(0, 0%, 0%);
+--Dark-Gray: hsl(0, 0%, 55%);
+--Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 2.5rem 4.5rem;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation nav ul li{
+    list-style: none;
+    display: inline;
+    margin-left: 0.9rem;
+    position: relative;
+}
+.navigation nav ul li::after{
+    content:'';
+    width:0;
+    height: 0.2rem;
+    background: var(--White);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.6rem;
+    margin: auto;
+    border-radius: 1rem;
+    visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+.navigation nav ul li:hover::after{
+   width: 70%;
+   visibility: visible;
+}
+.navigation nav ul li a{
+    text-decoration: none;
+    color: var(--White);
+    padding-bottom: 1rem;
+}
+.header h1{
+    margin: 12.5% 0;
+    font-size: 3.5rem;
+    width: 35%;
+    text-transform: uppercase;
+    font-family: 'Alat'sans-serif;
+    color: var(--White);
+    border: 0.2rem solid var(--White);
+    padding: 0.5rem 1rem;
+}
+.section-1{
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 4rem 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+.section-img, .section-1-content{
+width: 100%;
+}
+.section-img img{
+    width: 100%;
+}
+.section-1-content{
+    background: var(--White);
+    padding: 2.5rem;
+    margin: 10% 0 0 -10%;
+}
+.section-1-content h1{
+    font-size: 3rem;
+    width: 60%;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-family: 'Josefin sans' sans-serif;
+
+}
+.section-1-content p{
+    color: var(--Dark-Gray);
+    width: 85%;
+}
+.section-2{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
+}
+.section-2-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.section-2-link h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Josefin sans' sans-serif;
+    font-weight: 300;
+    color: var(--Black);
+}
+.section-2-link button{
+    padding: 0.5rem 1.5rem;
+    background: inherit;
+    border: 0.1rem solid var(--Black);
+    outline: none;
+    cursor: pointer;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+.section-2-link button:hover{
+    background: var(--Black);
+    color: var(--White);
+}
+.section-2-wrapper{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.section-2-wrapper div{
+    width: 24%;
+    height: 30rem;
+    position: relative;
+    color: var(--White);
+    transition: all 0.4s ease-in;
+}
+.section-2-wrapper div:nth-child(1){
+    background-image: url('./images/desktop/image-deep-earth.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div:nth-child(2){
+    background-image: url('./images/desktop/image-night-arcade.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div:nth-child(3){
+    background-image: url('./images/desktop/image-soccer-team.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div:nth-child(4){
+    background-image: url('./images/desktop/image-grid.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div:nth-child(5){
+    background-image: url('./images/desktop/image-from-above.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div:nth-child(6){
+    background-image: url('./images/desktop/image-pocket-borealis.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div:nth-child(7){
+    background-image: url('./images/desktop/image-curiosity.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div:nth-child(8){
+    background-image: url('./images/desktop/image-fisheye.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section-2-wrapper div span{
+    color: var(--White);
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: 'Josefin sans' sans-serif;
+    width: 50%;
+    z-index: 1;
+}
+.section-2-wrapper div::after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top:0;
+    visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+.section-2-wrapper div:hover::after{
+    visibility: visible;
+}
+.section-2-wrapper div:hover span{
+    color:var(--Black);
+}
